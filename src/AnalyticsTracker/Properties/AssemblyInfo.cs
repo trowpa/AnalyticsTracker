@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("AnalyticsTracker")]
+[assembly: AssemblyTitle("Paragon.AnalyticsTracker")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Vertica A/S")]
+[assembly: AssemblyCompany("Vertica A/S and Paragon Consulting Inc.")]
 [assembly: AssemblyProduct("AnalyticsTracker")]
-[assembly: AssemblyCopyright("Copyright ©  2015")]
+[assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

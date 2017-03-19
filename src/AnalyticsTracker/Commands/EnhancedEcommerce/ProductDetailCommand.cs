@@ -1,7 +1,7 @@
 ﻿using System.Text;
-using Vertica.AnalyticsTracker.Commands.EnhancedEcommerce.FieldObjects;
+using Paragon.Analytics.Commands.EnhancedEcommerce.FieldObjects;
 
-namespace Vertica.AnalyticsTracker.Commands.EnhancedEcommerce
+namespace Paragon.Analytics.Commands.EnhancedEcommerce
 {
 	public class ProductDetailCommand : EnhancedEcommerceCommandBase
 	{

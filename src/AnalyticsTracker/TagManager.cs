@@ -1,6 +1,6 @@
 using System.Web;
 
-namespace Vertica.AnalyticsTracker
+namespace Paragon.Analytics
 {
 	public class TagManager
 	{

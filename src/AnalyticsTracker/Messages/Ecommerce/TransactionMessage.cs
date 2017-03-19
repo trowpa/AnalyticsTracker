@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace Vertica.AnalyticsTracker.Messages.Ecommerce
+namespace Paragon.Analytics.Messages.Ecommerce
 {
 	public class TransactionMessage : MessageBase
 	{

@@ -1,4 +1,4 @@
-namespace Vertica.AnalyticsTracker.Commands.EnhancedEcommerce.FieldObjects
+namespace Paragon.Analytics.Commands.EnhancedEcommerce.FieldObjects
 {
 	public class ProductClickActionFieldObject : ActionFieldObject
 	{

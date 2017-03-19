@@ -1,5 +1,5 @@
 ﻿using NUnit.Framework;
-using Vertica.AnalyticsTracker.Messages.Ecommerce;
+using Paragon.Analytics.Messages.Ecommerce;
 
 namespace AnalyticsTracker.Tests.Messages
 {

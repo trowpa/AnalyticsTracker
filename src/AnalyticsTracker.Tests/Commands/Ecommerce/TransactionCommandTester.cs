@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
-using Vertica.AnalyticsTracker;
-using Vertica.AnalyticsTracker.Commands.Ecommerce;
+using Paragon.Analytics;
+using Paragon.Analytics.Commands.Ecommerce;
 
 namespace AnalyticsTracker.Tests.Commands.Ecommerce
 {

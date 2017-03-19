@@ -1,6 +1,6 @@
 ﻿using System.Text;
 
-namespace Vertica.AnalyticsTracker.Commands.Ecommerce
+namespace Paragon.Analytics.Commands.Ecommerce
 {
 	public class TransactionCommand : CommandBase
 	{
