@@ -15,5 +15,6 @@ namespace Paragon.Analytics.Extensions
 
 			return result;
 		}
-	}
+      
+    }
 }

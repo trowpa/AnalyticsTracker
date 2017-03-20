@@ -49,5 +49,8 @@ namespace Paragon.Analytics.Models
                 return infoCO.Render();
             }
         }
+
+        public string CurrencyISO { get; set; }
+        
     }
 }

@@ -69,6 +69,7 @@
     <Compile Include="CommandTracker.cs" />
     <Compile Include="ConfigurationObject.cs" />
     <Compile Include="DataLayerPushers\GeneralDataPusher.cs" />
+    <Compile Include="Extensions\ExtensionsToHttpResponse.cs" />
     <Compile Include="Extensions\ExtensionsToHttpRequest.cs" />
     <Compile Include="Extensions\ExtenstionsToString.cs" />
     <Compile Include="Extensions\GTMDecimalExtensions.cs" />

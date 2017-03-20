@@ -1,10 +1,6 @@
-﻿using System;
+﻿using Paragon.Analytics.Models;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
-using Paragon.Analytics;
-using Paragon.Analytics.Commands.EnhancedEcommerce.FieldObjects;
-using Paragon.Analytics.Models;
 
 namespace Paragon.Analytics.Messages
 {
@@ -19,7 +15,10 @@ namespace Paragon.Analytics.Messages
         {
             initInfo(promoImpressions, currencyISO);
         }
-      
+        public EnhancedPromotionImpressionMessage(string currencyISO)
+        {
+            initInfo(null, currencyISO);
+        }
         public override string RenderMessage(string dataLayerName)
         {
             return Push(dataLayerName, _commerceConfig);
@@ -39,7 +38,10 @@ namespace Paragon.Analytics.Messages
                 imps = new List<GTMPromotion>();
             }
 
-
+            if (TagManager.Current.HasPromoImpressionsWaiting)
+            {
+              imps =  imps.Concat(TagManager.Current.PromoImpressions).ToList();
+            }
             Dictionary<string, object> configWrap = new Dictionary<string, object>();
             Dictionary<string, object> ecomWrap = new Dictionary<string, object>();
             Dictionary<string, object> actionWrap = new Dictionary<string, object>();
@@ -59,6 +61,6 @@ namespace Paragon.Analytics.Messages
             TagManager.Current.AddMessage(this);
 
         }
-
+       
     }
 }

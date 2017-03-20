@@ -10,6 +10,7 @@ namespace Paragon.Analytics.Modules
 		public void Init(HttpApplication context)
 		{
 			context.EndRequest += ContextOnEndRequest;
+      
 		}
 
 		private void ContextOnEndRequest(object sender, EventArgs eventArgs)
@@ -36,7 +37,8 @@ namespace Paragon.Analytics.Modules
 					i++;
 				}
 			}
-		}
+         
+        }
 
 		public void Dispose()
 		{
