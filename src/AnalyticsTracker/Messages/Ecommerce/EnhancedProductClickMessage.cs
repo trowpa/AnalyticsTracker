@@ -2,6 +2,8 @@
 using System.Linq;
 using Paragon.Analytics;
 using Paragon.Analytics.Models;
+using System;
+using Newtonsoft.Json.Linq;
 
 namespace Paragon.Analytics.Messages
 {
@@ -11,8 +13,13 @@ namespace Paragon.Analytics.Messages
         private string _actionString = "click";
 
         private ConfigurationObject _commerceConfig;
-       
-       
+
+        public EnhancedProductClickMessage(GTMProduct productClicked, string list, string currencyISO, string productUrl)
+        {
+            initInfo(productClicked, currencyISO, list, productUrl);
+
+
+        }
         public EnhancedProductClickMessage(GTMProduct productClicked,string list, string currencyISO)
         {
             initInfo(productClicked,currencyISO,list);
@@ -32,7 +39,7 @@ namespace Paragon.Analytics.Messages
         }
 
 
-        private void initInfo(GTMProduct p, string currencyISO, string List = "")
+        private void initInfo(GTMProduct p, string currencyISO, string List = "", string productUrl = "")
         {
             List<GTMProduct> li = new List<GTMProduct>{p};
 
@@ -51,6 +58,17 @@ namespace Paragon.Analytics.Messages
 
             configWrap["event"] = _eventString;
             configWrap["ecommerce"] = ecomWrap;
+
+            //Use below if callbacks are needed - however right now the thought is not to make the links dependant on gtm success.
+            //Don't break navigation because gtm js fails - so let the non-js href work at risk of losing a gtm hit due to race conditions
+            //if (!string.IsNullOrEmpty(productUrl))
+            //{
+
+            //    var navFunctionFormat = "function() {{ document.location = {0};}}";
+            //    var cb = string.Format(navFunctionFormat, productUrl);
+
+            //    configWrap["eventCallback"] = new JRaw(cb);
+            //}
 
             _commerceConfig = new ConfigurationObject(configWrap);
 

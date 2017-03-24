@@ -6,7 +6,10 @@ namespace Paragon.Analytics.Messages
 {
     public class EnhancedProductImpressionMessage : MessageBase
     {
-      
+        private string _eventString = "productImpression";
+        //private string _actionString = "promoView";
+
+
         private ConfigurationObject _commerceConfig;
 
         public EnhancedProductImpressionMessage(List<GTMImpression> productImpressions,  string currencyISO)
@@ -39,10 +42,14 @@ namespace Paragon.Analytics.Messages
          
             Dictionary<string, object> configWrap = new Dictionary<string, object>();
             Dictionary<string, object> ecomWrap = new Dictionary<string, object>();
+            
+         
 
             ecomWrap["impressions"] = imps.Select(i => i.Info).ToArray();
+           
             ecomWrap["currencyCode"] = currencyISO;
 
+            configWrap["event"] = _eventString;
             configWrap["ecommerce"] = ecomWrap;
 
             _commerceConfig = new ConfigurationObject(configWrap);

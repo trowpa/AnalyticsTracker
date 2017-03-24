@@ -33,7 +33,7 @@ namespace Paragon.Analytics.Messages
             Dictionary<string, object> ecomWrap = new Dictionary<string, object>();
             Dictionary<string, object> actionWrap = new Dictionary<string, object>();
           
-            actionWrap["products"] = promos.Select(i => i.Info).ToArray();
+            actionWrap["promotions"] = promos.Select(i => i.Info).ToArray();
 
             ecomWrap[_actionString] = actionWrap;
             ecomWrap["currencyCode"] = currencyISO;
