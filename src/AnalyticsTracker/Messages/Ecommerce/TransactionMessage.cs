@@ -21,5 +21,9 @@ namespace Paragon.Analytics.Messages.Ecommerce
 		{
 			return Push(dataLayerName, new ConfigurationObject(_info));
 		}
+    	public override string RenderMessage()
+		{
+			return Push(new ConfigurationObject(_info));
+		}
 	}
 }

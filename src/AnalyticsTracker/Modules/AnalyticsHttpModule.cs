@@ -1,7 +1,7 @@
 using System;
 using System.Text;
 using System.Web;
-using Paragon.Analytics.Extensions;
+using Vertica.AnalyticsTracker.Extensions;
 
 namespace Paragon.Analytics.Modules
 {
@@ -10,14 +10,13 @@ namespace Paragon.Analytics.Modules
 		public void Init(HttpApplication context)
 		{
 			context.EndRequest += ContextOnEndRequest;
-      
 		}
 
 		private void ContextOnEndRequest(object sender, EventArgs eventArgs)
 		{
 			if (HttpContext.Current.Request.IsAnalyticsTrackingEnabled())
 			{
-				var renderBody = AnalyticsTracker.Current.RenderForHeader();
+				var renderBody = AnalyticsTracker.Current.RenderForHeader() + TagManager.Current.RenderHeader();
 
 				if(string.IsNullOrWhiteSpace(renderBody))
 					return;
@@ -33,12 +32,11 @@ namespace Paragon.Analytics.Modules
 				const int bytePerHeader = 5000;
 				while (encodedString.Length > i * bytePerHeader)
 				{
-					response.AddHeader(string.Format("AnalyticsTracker-{0}", i), encodedString.SafeSubstring(bytePerHeader * i, bytePerHeader));
+					response.AddHeader($"AnalyticsTracker-{i}", encodedString.SafeSubstring(bytePerHeader * i, bytePerHeader));
 					i++;
 				}
 			}
-         
-        }
+		}
 
 		public void Dispose()
 		{

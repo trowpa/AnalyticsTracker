@@ -17,5 +17,12 @@ namespace Paragon.Analytics.Messages
 			var obj = new ConfigurationObject(vals);
 			return Push(dataLayerName, obj);
 		}
+    
+    public override string RenderMessage()
+		{
+			var vals = new Dictionary<string, object> {{"event", _eventName}};
+			var obj = new ConfigurationObject(vals);
+			return Push(obj);
+		}
 	}
 }

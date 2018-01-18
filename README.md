@@ -15,7 +15,7 @@ In your template, add the following after the `<body>` to render the tracking sc
 
 ### MVC
 
-	@using Paragon.Analytics
+	@using Vertica.AnalyticsTracker
 	...
 	<body>
 		@AnalyticsTracker.Render("UA-xxxxxx-1")
@@ -24,7 +24,7 @@ In your template, add the following after the `<body>` to render the tracking sc
 
 ### Webforms
 
-	<%@ Import Namespace="Paragon.Analytics" %>
+	<%@ Import Namespace="Vertica.AnalyticsTracker" %>
 	...
 	<body>
 		<%= AnalyticsTracker.Render("UA-xxxxxx-1") %>
@@ -48,7 +48,11 @@ You can tweak the settings of the tracker by using the overloads of the Render()
 
 ### Ajax
 
-AnalyticsTracker can also track data from ajax requests. We have included ajax interceptors for `jQuery` and `angular`, that you can include in you site. Make sure to include it after the frameworks.
+AnalyticsTracker can also track data from ajax requests. In order to activate this, add the `Vertica.AnalyticsTracker.Modules.AnalyticsHttpModule` to your application. Then for requests you want to track, set the `AnalyticsTracker-Enabled` http request header to `true`.
+
+The response will then include the tracking js code as base64 encoded headers.
+
+We have included ajax interceptors for `jQuery` and `angular` in the file `/Scripts/analyticstracker.adapters.js`, that you can include in you site. Make sure to include it after the frameworks.
 
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.12/angular.min.js"></script>
@@ -130,7 +134,7 @@ If you have enabled Enhanced Ecommerce tracking in your account, then you should
 
 You may also want to set the currency on your tracker when tracking ecommerce
 
-Enhanced Ecommerce also lets you track a lot of other things. The commands are located in the `Paragon.Analytics.Commands.EnhancedEcommerce` namespace:
+Enhanced Ecommerce also lets you track a lot of other things. The commands are located in the `Vertica.AnalyticsTracker.Commands.EnhancedEcommerce` namespace:
 
 	AddToBasketCommand(...)
 	RemoveFromBasketCommand(...)
@@ -171,7 +175,7 @@ In your template, add the following after the `<body>` to render the tracking sc
 
 ### MVC
 
-	@using Paragon.Analytics
+	@using Vertica.AnalyticsTracker
 	...
 	<body>
 		@TagManager.Render("GTM-XXYYY")
@@ -180,7 +184,7 @@ In your template, add the following after the `<body>` to render the tracking sc
 
 ### Webforms
 
-	<%@ Import Namespace="Paragon.Analytics" %>
+	<%@ Import Namespace="Vertica.AnalyticsTracker" %>
 	...
 	<body>
 		<%= TagManager.Render("GTM-XXYYY") %>

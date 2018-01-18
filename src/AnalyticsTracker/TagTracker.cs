@@ -118,7 +118,7 @@ height='0' width='0' style='display:none;visibility:hidden'></iframe></noscript>
         private void RenderDataLayer(StringBuilder sb)
         {
             sb.AppendLine("<script>");
-            sb.AppendFormat("var {0} = [];", _dataLayerName);
+            sb.Append($"var {_dataLayerName} = []; function tagManagerPush(obj){{{_dataLayerName}.push(obj);}}");
             sb.AppendLine();
             RenderMessages(sb);
             sb.AppendLine("</script>");
