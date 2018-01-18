@@ -1,12 +1,14 @@
-﻿using System.Collections.Generic;
+﻿using Paragon.Analytics.Models;
+using System.Collections.Generic;
 using System.Text;
 
-namespace Vertica.AnalyticsTracker
+namespace Paragon.Analytics
 {
     public class TagTracker
     {
         private string _account;
         private string _dataLayerName;
+        private readonly List<GTMPromotion>_promotionImpressions;
         private readonly List<MessageBase> _messages;
         private string _environmentAuth;
         private string _environmentPreview;

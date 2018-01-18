@@ -15,7 +15,7 @@ In your template, add the following after the `<body>` to render the tracking sc
 
 ### MVC
 
-	@using Vertica.AnalyticsTracker
+	@using Paragon.Analytics
 	...
 	<body>
 		@AnalyticsTracker.Render("UA-xxxxxx-1")
@@ -24,7 +24,7 @@ In your template, add the following after the `<body>` to render the tracking sc
 
 ### Webforms
 
-	<%@ Import Namespace="Vertica.AnalyticsTracker" %>
+	<%@ Import Namespace="Paragon.Analytics" %>
 	...
 	<body>
 		<%= AnalyticsTracker.Render("UA-xxxxxx-1") %>
@@ -130,7 +130,7 @@ If you have enabled Enhanced Ecommerce tracking in your account, then you should
 
 You may also want to set the currency on your tracker when tracking ecommerce
 
-Enhanced Ecommerce also lets you track a lot of other things. The commands are located in the `Vertica.AnalyticsTracker.Commands.EnhancedEcommerce` namespace:
+Enhanced Ecommerce also lets you track a lot of other things. The commands are located in the `Paragon.Analytics.Commands.EnhancedEcommerce` namespace:
 
 	AddToBasketCommand(...)
 	RemoveFromBasketCommand(...)
@@ -171,7 +171,7 @@ In your template, add the following after the `<body>` to render the tracking sc
 
 ### MVC
 
-	@using Vertica.AnalyticsTracker
+	@using Paragon.Analytics
 	...
 	<body>
 		@TagManager.Render("GTM-XXYYY")
@@ -180,7 +180,7 @@ In your template, add the following after the `<body>` to render the tracking sc
 
 ### Webforms
 
-	<%@ Import Namespace="Vertica.AnalyticsTracker" %>
+	<%@ Import Namespace="Paragon.Analytics" %>
 	...
 	<body>
 		<%= TagManager.Render("GTM-XXYYY") %>

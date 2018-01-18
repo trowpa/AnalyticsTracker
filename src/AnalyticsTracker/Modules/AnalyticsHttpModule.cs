@@ -1,9 +1,9 @@
 using System;
 using System.Text;
 using System.Web;
-using Vertica.AnalyticsTracker.Extensions;
+using Paragon.Analytics.Extensions;
 
-namespace Vertica.AnalyticsTracker.Modules
+namespace Paragon.Analytics.Modules
 {
 	public class AnalyticsHttpModule : IHttpModule
 	{

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Vertica.AnalyticsTracker.Commands.EnhancedEcommerce.FieldObjects
+namespace Paragon.Analytics.Commands.EnhancedEcommerce.FieldObjects
 {
 	public class ProductFieldObject
 	{

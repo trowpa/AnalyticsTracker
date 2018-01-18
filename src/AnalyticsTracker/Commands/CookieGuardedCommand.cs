@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text;
 
-namespace Vertica.AnalyticsTracker.Commands
+namespace Paragon.Analytics.Commands
 {
 	public class CookieGuardedCommand : CommandBase
 	{

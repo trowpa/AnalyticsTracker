@@ -1,4 +1,4 @@
-﻿namespace Vertica.AnalyticsTracker.Extensions
+﻿namespace Paragon.Analytics.Extensions
 {
 	public static class ExtenstionsToString
 	{

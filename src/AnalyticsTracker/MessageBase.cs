@@ -1,4 +1,4 @@
-﻿namespace Vertica.AnalyticsTracker
+﻿namespace Paragon.Analytics
 {
 	public abstract class MessageBase
 	{

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Vertica.AnalyticsTracker.Messages.Ecommerce
+namespace Paragon.Analytics.Messages.Ecommerce
 {
 	public class TransactionItemInfo
 	{

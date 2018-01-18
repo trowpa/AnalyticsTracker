@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Vertica.AnalyticsTracker.Messages
+namespace Paragon.Analytics.Messages
 {
 	public class Event : MessageBase
 	{

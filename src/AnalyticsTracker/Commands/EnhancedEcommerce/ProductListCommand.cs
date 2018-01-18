@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Text;
-using Vertica.AnalyticsTracker.Commands.EnhancedEcommerce.FieldObjects;
-using Vertica.AnalyticsTracker.Commands.Events;
+using Paragon.Analytics.Commands.EnhancedEcommerce.FieldObjects;
+using Paragon.Analytics.Commands.Events;
 
-namespace Vertica.AnalyticsTracker.Commands.EnhancedEcommerce
+namespace Paragon.Analytics.Commands.EnhancedEcommerce
 {
 	public class ProductListCommand : EnhancedEcommerceCommandBase
 	{

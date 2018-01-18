@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using NUnit.Framework;
-using Vertica.AnalyticsTracker;
+using Paragon.Analytics;
 
 namespace AnalyticsTracker.Tests
 {
