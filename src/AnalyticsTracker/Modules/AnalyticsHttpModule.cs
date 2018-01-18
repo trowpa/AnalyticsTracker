@@ -3,7 +3,7 @@ using System.Text;
 using System.Web;
 using Vertica.AnalyticsTracker.Extensions;
 
-namespace Vertica.AnalyticsTracker.Modules
+namespace Paragon.Analytics.Modules
 {
 	public class AnalyticsHttpModule : IHttpModule
 	{

@@ -1,4 +1,4 @@
-﻿namespace Vertica.AnalyticsTracker.Commands.EnhancedEcommerce
+﻿namespace Paragon.Analytics.Commands.EnhancedEcommerce
 {
 	public abstract class EnhancedEcommerceCommandBase : CommandBase
 	{

@@ -1,6 +1,6 @@
 ﻿using System;
-
-namespace Vertica.AnalyticsTracker.Commands
+  
+namespace Paragon.Analytics.Commands
 {
     public class CookieGuardedCommand : CommandBase
 	{
@@ -46,4 +46,5 @@ namespace Vertica.AnalyticsTracker.Commands
 		    return CookieGuardedScript.GuardScript(guardedScript, _commandId, _now, _cookieExpirationDays);
 		}
 	}
+
 }

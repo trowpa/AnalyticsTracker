@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Vertica.AnalyticsTracker.Messages
+namespace Paragon.Analytics.Messages
 {
 	public class Variable : MessageBase
 	{
@@ -24,7 +24,13 @@ namespace Vertica.AnalyticsTracker.Messages
 		public Variable(string name, Dictionary<string, object> value) : this(name, (object)value) { }
 		public Variable(string name, Dictionary<string, object>[] values) : this(name, (object)values) { }
 
-		public override string RenderMessage()
+		public override string RenderMessage(string dataLayerName)
+		{
+			var vals = new Dictionary<string, object> { { _name, _value } };
+			var obj = new ConfigurationObject(vals);
+			return Push(dataLayerName, obj);
+		}
+    	public override string RenderMessage()
 		{
 			var vals = new Dictionary<string, object> { { _name, _value } };
 			var obj = new ConfigurationObject(vals);

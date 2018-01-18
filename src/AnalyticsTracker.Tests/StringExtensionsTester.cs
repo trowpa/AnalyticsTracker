@@ -1,5 +1,5 @@
 ﻿using NUnit.Framework;
-using Vertica.AnalyticsTracker.Extensions;
+using Paragon.Analytics.Extensions;
 
 namespace AnalyticsTracker.Tests
 {

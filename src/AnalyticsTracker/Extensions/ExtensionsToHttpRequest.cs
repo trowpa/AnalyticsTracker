@@ -1,6 +1,6 @@
 ﻿using System.Web;
 
-namespace Vertica.AnalyticsTracker.Extensions
+namespace Paragon.Analytics.Extensions
 {
 	public static class ExtensionsToHttpRequest
 	{
@@ -15,5 +15,6 @@ namespace Vertica.AnalyticsTracker.Extensions
 
 			return result;
 		}
-	}
+      
+    }
 }

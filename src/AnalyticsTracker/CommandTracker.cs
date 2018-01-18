@@ -2,9 +2,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Web;
-using Vertica.AnalyticsTracker.Commands;
+using Paragon.Analytics.Commands;
 
-namespace Vertica.AnalyticsTracker
+namespace Paragon.Analytics
 {
 	public class CommandTracker
 	{

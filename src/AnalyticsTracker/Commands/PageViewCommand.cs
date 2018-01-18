@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Vertica.AnalyticsTracker.Commands
+namespace Paragon.Analytics.Commands
 {
 	public class PageViewCommand : CommandBase
 	{

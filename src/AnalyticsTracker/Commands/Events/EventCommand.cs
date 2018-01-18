@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Vertica.AnalyticsTracker.Commands.Events
+namespace Paragon.Analytics.Commands.Events
 {
 	public class EventCommand : CommandBase
 	{

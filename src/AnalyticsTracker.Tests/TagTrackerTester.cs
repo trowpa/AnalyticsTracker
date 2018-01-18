@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
-using Vertica.AnalyticsTracker;
-using Vertica.AnalyticsTracker.Messages;
+using Paragon.Analytics;
+using Paragon.Analytics.Messages;
 
 namespace AnalyticsTracker.Tests
 {

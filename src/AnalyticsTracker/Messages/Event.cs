@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Vertica.AnalyticsTracker.Messages
+namespace Paragon.Analytics.Messages
 {
 	public class Event : MessageBase
 	{
@@ -11,7 +11,14 @@ namespace Vertica.AnalyticsTracker.Messages
 			_eventName = eventName;
 		}
 
-		public override string RenderMessage()
+		public override string RenderMessage(string dataLayerName)
+		{
+			var vals = new Dictionary<string, object> {{"event", _eventName}};
+			var obj = new ConfigurationObject(vals);
+			return Push(dataLayerName, obj);
+		}
+    
+    public override string RenderMessage()
 		{
 			var vals = new Dictionary<string, object> {{"event", _eventName}};
 			var obj = new ConfigurationObject(vals);

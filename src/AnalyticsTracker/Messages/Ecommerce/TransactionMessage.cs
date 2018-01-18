@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace Vertica.AnalyticsTracker.Messages.Ecommerce
+namespace Paragon.Analytics.Messages.Ecommerce
 {
 	public class TransactionMessage : MessageBase
 	{
@@ -17,7 +17,11 @@ namespace Vertica.AnalyticsTracker.Messages.Ecommerce
 			_info["transactionProducts"] = items.Select(i => i.Info).ToArray();
 		}
 
-		public override string RenderMessage()
+		public override string RenderMessage(string dataLayerName)
+		{
+			return Push(dataLayerName, new ConfigurationObject(_info));
+		}
+    	public override string RenderMessage()
 		{
 			return Push(new ConfigurationObject(_info));
 		}

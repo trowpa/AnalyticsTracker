@@ -1,7 +1,7 @@
 ﻿using System;
 using NUnit.Framework;
-using Vertica.AnalyticsTracker.Commands;
-using Vertica.AnalyticsTracker.Commands.Events;
+using Paragon.Analytics.Commands;
+using Paragon.Analytics.Commands.Events;
 
 namespace AnalyticsTracker.Tests.Commands
 {
